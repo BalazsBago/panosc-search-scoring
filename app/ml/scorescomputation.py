@@ -95,7 +95,7 @@ class SC:
     ))
     self._term2col = { t:c for c,t in enumerate(self._col2term) }
     self._row2item = sorted(list(
-      set([item['itemId'] for item in weights])  # + self._requested_items)
+      set([item['itemId'] for item in weights] + self._requested_items)
     ))
     self._item2row = { i:r for r,i in enumerate(self._row2item) }
 
